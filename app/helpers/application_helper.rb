@@ -1,2 +1,26 @@
 module ApplicationHelper
+  def nav_bar
+    content_tag(:ul, class: "navbar-nav mr-auto") do
+      yield
+    end
+  end
+
+  def nav_link(text, path)
+    options = current_page?(path) ? { class: "nav-item active" } : {class: "nav-item"}
+    content_tag(:li, options) do
+      link_to text, path, class: "nav-link"
+    end
+  end
+
+  def bootstrap_class_for flash_type
+    { success: 'alert-success', error: 'alert-danger', notice: 'alert-warning'}[flash_type.to_sym]
+  end
+
+  def flash_messages(opts = {})
+    flash.map do |msg_type, message|
+      content_tag(:div, message, class: "alert #{bootstrap_class_for(msg_type)} fade show") do
+        content_tag(:button, 'x'.html_safe, class: 'close', data: {dismiss: 'alert'}) + message
+      end
+    end.join.html_safe
+  end
 end

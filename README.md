@@ -1,18 +1,18 @@
 # Homework 2 - *Coder Chat*
 
-**Coder Chat** is a Ruby on Rails blog application that allows users to send messages to each other that can only be read once.
+**Coder Chat** is a Ruby on Rails application that allows users to send messages to each other that can only be read once.
 
 Submitted by: **Ha Ta**
 
 Time spent: **8** hours
 
-URL: **Insert your Heroku URL here**
+URL: **https://hata-chat.herokuapp.com**
 
 ## User Stories
 
 The following **required** functionality is complete:
 
-* [ ] User can sign up by providing their email, password, and name.
+* [x] User can sign up by providing their email, password, and name.
 * [ ] User can login using an email and password.
 * [ ] After logging in, the user is taken to an INBOX page that has a list of incoming messages, sorted in descending chronological order (newest messages at top)
   * Provide a fake "new message" link and a "sent messages" link BUT don't have to make them work yet.
@@ -44,7 +44,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](relative-path-to-your-gif-file-on-github-or-absolute-path-to-file-on-imgur-or-youtube)
+![Video Walkthrough](walkthrough.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

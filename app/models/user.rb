@@ -8,8 +8,8 @@ class User < ApplicationRecord
   has_many :inverse_friends, through: :inverse_friendships, source: :user
   validates :email, presence: true, uniqueness: true
 
-  def self.have_friend(user_id)
-    inverse_friends.each do |user|
+  def have_friend(user_id)
+    self.inverse_friends.each do |user|
       return true if user.id === user_id
     end
     return false

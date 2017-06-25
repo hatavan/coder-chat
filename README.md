@@ -13,8 +13,8 @@ URL: **https://hata-chat.herokuapp.com**
 The following **required** functionality is complete:
 
 * [x] User can sign up by providing their email, password, and name.
-* [ ] User can login using an email and password.
-* [ ] After logging in, the user is taken to an INBOX page that has a list of incoming messages, sorted in descending chronological order (newest messages at top)
+* [x] User can login using an email and password.
+* [x] After logging in, the user is taken to an INBOX page that has a list of incoming messages, sorted in descending chronological order (newest messages at top)
   * Provide a fake "new message" link and a "sent messages" link BUT don't have to make them work yet.
 * [ ] Unread messages should be **bold** or something similar in the list of messages.
 * [ ] Implement "Users" link to take the user to a page that lists all users. Next to/under each user, provide a link to "Add As Friend" to add the user to your list of friends.

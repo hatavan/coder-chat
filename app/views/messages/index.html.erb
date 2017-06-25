@@ -1,0 +1,15 @@
+<div class="card-block">
+  <h1 class="card-title">Inbox</h1>
+  <div class="card-text">
+    <div class="form-group">
+      <%= link_to new_message_path do %>
+        <button class="btn btn-primary">New Message</button>
+      <% end %>
+
+      <%= link_to sent_messages_path do %>
+        <button class="btn btn-primary">Sent Message</button>
+      <% end %>
+    </div>
+    <%= render 'list' %>
+  </div>
+</div>

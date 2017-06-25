@@ -5,10 +5,10 @@ module ApplicationHelper
     end
   end
 
-  def nav_link(text, path)
+  def nav_link(text, path, method = 'get')
     options = current_page?(path) ? { class: "nav-item active" } : {class: "nav-item"}
     content_tag(:li, options) do
-      link_to text, path, class: "nav-link"
+      link_to text, path, method: method, class: "nav-link"
     end
   end
 

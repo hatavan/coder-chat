@@ -11,8 +11,10 @@
   <body>
     <%= render 'layouts/navbar' %>
     <div class="container">
-      <p id="notice"><%= flash_messages %></p>
-      <%= yield %>
+      <p id="notice" class="w-70"><%= flash_messages %></p>
+      <div class="card w-70">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :messages
+  get 'sent_messages' => 'messages#sent'
+
   get 'login' => 'sessions#new'
-
-  resources :sessions, only: [:create]
-
   delete 'logout' => 'sessions#destroy'
+  resources :sessions, only: [:create]
 
   get 'sign_up' => 'users#new'
 

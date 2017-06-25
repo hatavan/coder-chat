@@ -16,7 +16,7 @@ The following **required** functionality is complete:
 * [x] User can login using an email and password.
 * [x] After logging in, the user is taken to an INBOX page that has a list of incoming messages, sorted in descending chronological order (newest messages at top)
   * Provide a fake "new message" link and a "sent messages" link BUT don't have to make them work yet.
-* [ ] Unread messages should be **bold** or something similar in the list of messages.
+* [x] Unread messages should be **bold** or something similar in the list of messages.
 * [ ] Implement "Users" link to take the user to a page that lists all users. Next to/under each user, provide a link to "Add As Friend" to add the user to your list of friends.
 * [ ] Implement "New Message" page. The recipient field should be a dropdown, where the options are names from the user's friends.
 * [ ] Implement "Sent Messages" page. It lists messages you have sent. Each message should display at what time it was read by the recipient, or "unread".

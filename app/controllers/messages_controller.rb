@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
   before_action :require_login
 
   def index
-    @messages = Message.order(:created_at).find_by(recipient_id: current_user.id)
+    @messages = Message.order(:created_at).where(recipient_id: current_user.id)
   end
 
   def new
@@ -13,6 +13,6 @@ class MessagesController < ApplicationController
   end
 
   def sent
-    @messages = Message.order(:created_at).find_by(sender_id: current_user.id)
+    @messages = Message.order(:created_at).where(sender_id: current_user.id)
   end
 end

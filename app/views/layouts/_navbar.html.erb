@@ -6,7 +6,8 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <%= nav_bar do %>
       <% if signed_in? %>
-        <%= nav_link 'Inbox', messages_path%>
+        <%= nav_link 'Inbox', messages_path %>
+        <%= nav_link 'Users', users_path %>
         <%= nav_link 'Logout', logout_path, 'delete' %>
       <% else %>
         <%= nav_link 'Sign Up', sign_up_path %>

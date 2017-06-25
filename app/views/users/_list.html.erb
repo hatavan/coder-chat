@@ -1,0 +1,36 @@
+<% if @users.present? %>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @users.each.with_index do |user, index| %>
+      <tr>
+        <th scope="row"><%= index + 1 %></th>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td>
+          <% if user.have_friend(current_user.id) %>
+            <%= link_to remove_friend_path(:friend_id => user.id), :method => :delete do %>
+              <button class="btn btn-danger">Remove Friend</button>
+            <% end %>
+          <% else %>
+            <%= link_to friendships_path(:friend_id => user.id), :method => :post do %>
+              <button class="btn btn-primary">Add As Friend</button>
+            <% end %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <div class="alert alert-info" role="alert">
+    <strong>Heads up!</strong> No user found.
+  </div>
+<% end %>

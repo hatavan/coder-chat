@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  subject: MyString
-  body: MyText
-  sender: 
+  subject: Sample message A
+  body: Message from user to admin
+  sender: two
   recipient: one
 
 two:
-  subject: MyString
-  body: MyText
-  sender: 
+  subject: Sample message B
+  body: Message from admin to user
+  sender: one
   recipient: two

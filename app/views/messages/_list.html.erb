@@ -12,7 +12,7 @@
     <% @messages.each.with_index do |message, index| %>
       <tr class="<%= 'table-danger' unless message.is_read.present? %>">
         <th scope="row"><%= index + 1 %></th>
-        <td><%= message.subject %></td>
+        <td><%= link_to message do %> <%= message.subject %> <% end %></td>
         <td><%= message.sender.name %></td>
         <td><%= message.created_at.strftime("%m/%d/%Y %H:%M:%S") %></td>
       </tr>

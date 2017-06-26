@@ -1,6 +1,31 @@
 <div class="card-block">
   <h1 class="card-title">Sent Messages</h1>
   <div class="card-text">
-    <%= render 'list' %>
+    <% if @messages.present? %>
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Subject</th>
+            <th>Receiver</th>
+            <th>Date</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @messages.each.with_index do |message, index| %>
+              <tr>
+                <th scope="row"><%= index + 1 %></th>
+                <td><%= link_to message do %> <%= message.subject %> <% end %></td>
+                <td><%= message.recipient.name %></td>
+                <td><%= message.updated_at.strftime("%m/%d/%Y %H:%M:%S") %></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+    <% else %>
+        <div class="alert alert-info" role="alert">
+          <strong>Heads up!</strong> No message found.
+        </div>
+    <% end %>
   </div>
 </div>

@@ -1,0 +1,12 @@
+<div class="card-block">
+  <h3 class="card-title"><%= @message.subject %></h3>
+  <div class="card-text">
+    <%= @message.body %>
+  </div>
+</div>
+<div class="card-footer">
+  <div class="row">
+    <div class="col-md-7">From: <small class="badge badge-info"><%= @message.sender.name %></small> To: <small class="badge badge-info"><%= @message.recipient.name %></small></div>
+    <div class="col-md-5 text-right">Created at: <small class="badge badge-info"><%= @message.created_at.strftime("%m/%d/%Y %H:%M:%S") %></small></div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="card-block">
+  <h3 class="card-title"><%= @message.subject %></h3>
+  <div class="card-text">
+    <div class="alert alert-info" role="alert">
+      <strong>Can read a message's content only once!</strong>
+    </div>
+  </div>
+</div>
+<div class="card-footer">
+  <div class="row">
+    <div class="col-md-7">From: <small class="badge badge-info"><%= @message.sender.name %></small> To: <small class="badge badge-info"><%= @message.recipient.name %></small></div>
+    <div class="col-md-5 text-right">Read at: <small class="badge badge-info"><%= @message.updated_at.strftime("%m/%d/%Y %H:%M:%S") %></small></div>
+  </div>
+</div>
